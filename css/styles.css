@@ -385,40 +385,23 @@ button {
 
 @media (min-width: 768px) {
   .album {
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 380px 1fr;
     gap: 4rem;
+    align-items: start;
   }
 }
 
-.album__artwork-placeholder {
+.album__embed {
   width: 100%;
-  aspect-ratio: 1;
-  max-width: 320px;
+  max-width: 380px;
   margin: 0 auto;
-  background: linear-gradient(135deg, #1a1520, #12111a, #1f1828);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(110, 84, 148, 0.15);
-  transition: box-shadow 0.4s;
 }
 
-.album__artwork-placeholder:hover {
-  box-shadow: 0 12px 60px rgba(110, 84, 148, 0.25);
-}
-
-.album__artwork-text {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--text-dim);
-  text-align: center;
-  line-height: 1.3;
-  letter-spacing: 0.05em;
+.album__embed iframe {
+  display: block;
 }
 
 .album__title {
@@ -523,6 +506,18 @@ button {
 .btn--outline:hover {
   border-color: var(--text-secondary);
   color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.btn--spotify {
+  background-color: #1DB954;
+  color: #fff;
+  border: 1px solid #1DB954;
+}
+
+.btn--spotify:hover {
+  background-color: #1ed760;
+  border-color: #1ed760;
   transform: translateY(-1px);
 }
 
