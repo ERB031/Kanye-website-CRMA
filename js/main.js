@@ -88,37 +88,12 @@
     });
   }
 
-  // ---- Ambient Glow Effect (Hero) ----
-  function initAmbientGlow() {
-    var hero = document.querySelector('.hero');
-    if (!hero) return;
-
-    var glow = document.createElement('div');
-    glow.style.cssText =
-      'position:absolute;top:50%;left:50%;width:500px;height:500px;' +
-      'background:radial-gradient(circle,rgba(110,84,148,0.08) 0%,transparent 70%);' +
-      'border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);' +
-      'animation:ambientFloat 8s ease-in-out infinite;z-index:1;';
-    hero.appendChild(glow);
-
-    // Add keyframes
-    var style = document.createElement('style');
-    style.textContent =
-      '@keyframes ambientFloat {' +
-      '0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }' +
-      '33% { transform: translate(-45%, -55%) scale(1.1); opacity: 1; }' +
-      '66% { transform: translate(-55%, -48%) scale(0.95); opacity: 0.7; }' +
-      '}';
-    document.head.appendChild(style);
-  }
-
   // ---- Initialize ----
   document.addEventListener('DOMContentLoaded', function () {
     initNav();
     initMobileMenu();
     initSmoothScroll();
     initScrollReveal();
-    initAmbientGlow();
   });
 
 })();
