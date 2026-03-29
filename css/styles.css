@@ -332,6 +332,15 @@ button {
   font-style: italic;
   color: var(--text-secondary);
   letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.hero__fans {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
   margin-bottom: 2.5rem;
 }
 
